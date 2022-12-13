@@ -1,4 +1,4 @@
-package com.example.shop.data;
+package com.example.shop.util;
 
 import com.example.shop.model.Role;
 import com.example.shop.model.User;

@@ -1,10 +1,10 @@
-package com.example.shop.dto.external;
+package com.example.shop.dto.response;
 
 import java.math.BigDecimal;
 import lombok.Data;
 
 @Data
-public class PhoneResponseDto {
+public class ProductResponseDto {
     private Long id;
     private String model;
     private BigDecimal price;

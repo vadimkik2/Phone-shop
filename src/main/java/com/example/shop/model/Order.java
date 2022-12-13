@@ -18,7 +18,7 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToMany
-    private List<Phone> phones;
+    private List<Product> phones;
     private BigDecimal price;
     @Column(name = "time_of_create")
     private LocalDateTime timeOfCreate;
@@ -35,7 +35,7 @@ public class Order {
 
     public BigDecimal getPrice() {
         return this.phones.stream()
-                .map(Phone::getPrice)
+                .map(Product::getPrice)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
     }
 
@@ -43,7 +43,7 @@ public class Order {
         return id;
     }
 
-    public List<Phone> getPhones() {
+    public List<Product> getPhones() {
         return phones;
     }
 
@@ -59,7 +59,7 @@ public class Order {
         this.id = id;
     }
 
-    public void setPhones(List<Phone> phones) {
+    public void setPhones(List<Product> phones) {
         this.phones = phones;
     }
 

@@ -10,9 +10,9 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends JpaRepository<User, Long> {
     User getById(Long id);
 
-    @Query( "select u " +
-            "from User u " +
-            "left join fetch u.roles "+
-            "where u.email = :email ")
+    @Query("select u "
+            + "from User u "
+            + "left join fetch u.roles "
+            + "where u.email = :email ")
     Optional<User> findByEmail(String email);
 }

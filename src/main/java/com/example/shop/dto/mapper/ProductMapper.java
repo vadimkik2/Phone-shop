@@ -1,17 +1,17 @@
 package com.example.shop.dto.mapper;
 
-import com.example.shop.dto.external.PhoneDto;
-import com.example.shop.dto.external.PhoneResponseDto;
-import com.example.shop.model.Phone;
+import com.example.shop.dto.request.ProductRequestDto;
+import com.example.shop.dto.response.ProductResponseDto;
+import com.example.shop.model.Product;
 import org.springframework.stereotype.Component;
 
 @Component
-public class PhoneMapper implements RequestDtoMapper<PhoneDto, Phone>,
-    ResponseDtoMapper<PhoneResponseDto, Phone>{
+public class ProductMapper implements RequestDtoMapper<ProductRequestDto, Product>,
+        ResponseDtoMapper<ProductResponseDto, Product> {
 
     @Override
-    public Phone mapToModel(PhoneDto dto) {
-        Phone phone = new Phone();
+    public Product mapToModel(ProductRequestDto dto) {
+        Product phone = new Product();
         phone.setId(dto.getId());
         phone.setModel(dto.getModel());
         phone.setPrice(dto.getPrice());
@@ -20,8 +20,8 @@ public class PhoneMapper implements RequestDtoMapper<PhoneDto, Phone>,
     }
 
     @Override
-    public PhoneResponseDto mapToDto(Phone phone) {
-        PhoneResponseDto dto = new PhoneResponseDto();
+    public ProductResponseDto mapToDto(Product phone) {
+        ProductResponseDto dto = new ProductResponseDto();
         dto.setId(phone.getId());
         dto.setModel(phone.getModel());
         dto.setPrice(phone.getPrice());

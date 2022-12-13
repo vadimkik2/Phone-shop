@@ -1,4 +1,4 @@
-package com.example.shop.dto.external;
+package com.example.shop.dto.response;
 
 import lombok.Data;
 

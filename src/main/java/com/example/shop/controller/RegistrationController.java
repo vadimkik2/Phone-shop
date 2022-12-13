@@ -1,23 +1,22 @@
 package com.example.shop.controller;
 
-
-import com.example.shop.dto.external.UserRequestDto;
-import com.example.shop.dto.external.UserResponseDto;
 import com.example.shop.dto.mapper.ResponseDtoMapper;
+import com.example.shop.dto.request.UserRequestDto;
+import com.example.shop.dto.response.UserResponseDto;
 import com.example.shop.model.User;
-import com.example.shop.service.AuthenticationService;
+import com.example.shop.service.RegistrationService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class AuthenticationController {
-    private final AuthenticationService authService;
+public class RegistrationController {
+    private final RegistrationService authService;
     private final ResponseDtoMapper<UserResponseDto, User> dtoMapper;
 
-    public AuthenticationController(AuthenticationService authService,
-                                    ResponseDtoMapper<UserResponseDto, User> dtoMapper) {
+    public RegistrationController(RegistrationService authService,
+                                  ResponseDtoMapper<UserResponseDto, User> dtoMapper) {
         this.authService = authService;
         this.dtoMapper = dtoMapper;
     }

@@ -1,6 +1,5 @@
 package com.example.shop.service.impl;
 
-
 import com.example.shop.model.User;
 import com.example.shop.repository.UserRepository;
 import com.example.shop.service.UserService;

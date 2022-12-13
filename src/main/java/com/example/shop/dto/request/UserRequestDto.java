@@ -1,4 +1,4 @@
-package com.example.shop.dto.external;
+package com.example.shop.dto.request;
 
 import com.example.shop.lib.FieldsValueMatch;
 import com.example.shop.lib.ValidEmail;
